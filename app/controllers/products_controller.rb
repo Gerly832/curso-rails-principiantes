@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to products_path
+      redirect_to products_path, notice: 'Tu producto se ha creado correctamente'
       else
         render :new, status: :unprocessable_entity #Permite renderizar
       end
@@ -32,5 +32,9 @@ private
 
 def product_params
   params.require(:product).permit(:title, :description, :price)
+  end
+
+  def edit
+    @product = Product.find(params[:id])
   end
 end
