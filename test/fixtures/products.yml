@@ -1,11 +1,21 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  price: 1
+#one:
+#  title: MyString
+#  description: MyText
+#  price: 1
 
-two:
-  title: MyString
-  description: MyText
-  price: 1
+#two:
+#  title: MyString
+#  description: MyText
+#  price: 1
+
+switch: 
+title: 'Consola Nintendo Switch'
+description: 'Cantidad de controles incluidos: 2, Conectividad de controles: Inalámbrico, Tipo de consola: Híbrida'
+price: 1600000
+
+play5:
+title: 'Consola PlayStation 5'
+description: 'Color: Blanco, Capacidad: 1 TB, Memoria RAM: 26 GB, Edición: Standard'
+price: 2650000

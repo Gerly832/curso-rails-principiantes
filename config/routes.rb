@@ -16,6 +16,13 @@ Rails.application.routes.draw do
   get '/products', to: 'products#index' #Cuando alguien venga a barra products, mandar a un controlador
   #Dentro de la vista Index
 
+
+  ##Página New
+  get '/products/new', to: 'products#new', as: :new_product
+  post '/products', to: 'products#create'
+
   ##DESARROLLO
-  get '/products/:id', to: 'products#show', as: :product #
+  get '/products/:id', to: 'products#show', as: :product 
+
+
 end
