@@ -25,8 +25,13 @@ Rails.application.routes.draw do
   get '/products/:id/edit', to: 'products#edit', as: :edit_product
   # Dos puntos parametro dinamico
 
-  ##DESARROLLO
+  #Página inicial
   get '/products/:id', to: 'products#show', as: :product 
 
+  #Página Update
+  patch '/products/:id', to: 'products#update'
+
+  #Eliminación de producto
+  delete '/products/:id', to: 'products#destroy'
 
 end
