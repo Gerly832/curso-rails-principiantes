@@ -4,12 +4,5 @@
 <%= Date.today %>
 <%= @products.count %>
 
+<%= render partial: 'product', collection: @products %>
 
-<% @products.each do |product|%>
-
-<%= link_to product_path(product.id) do %>
-
-    <h2><%= product.title %></h2>
-    <%= product.price %>
-    <% end %>
-<% end %>
