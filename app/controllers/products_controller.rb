@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      flash[:notice] = 'Tu producto se ha creado correctamente'
+      flash[:notice] = t('.created')
       redirect_to @product #Esto redirige a la página del producto recién creado
       else
         render :new, status: :unprocessable_entity #Permite renderizar
@@ -37,7 +37,8 @@ class ProductsController < ApplicationController
   def update
 
     if product.update(product_params)
-      redirect_to @product, notice: 'Su producto se ha actualizado correctamente'
+      flash[:notice] = t('.updated')
+      redirect_to @product 
     else
       render :edit, status: :unprocessable_entity
     end
@@ -45,7 +46,7 @@ class ProductsController < ApplicationController
 
   def destroy
     product.destroy
-    redirect_to products_path, notice: 'Tu producto ha sido eliminado exitosamente', status: :see_other
+    redirect_to products_path, notice: t('.destroyed'), status: :see_other
   end
 
   #Crea la variable y devuelve el producto

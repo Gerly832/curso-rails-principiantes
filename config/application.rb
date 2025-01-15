@@ -1,4 +1,4 @@
-require_relative "boot"
+require_relative "boot" #Aquí se declara la configuración de toda la aplicación
 
 require "rails/all"
 
@@ -23,5 +23,11 @@ module Vendelo
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # 
+    # Disponibles idiomas
+    config.i18n.available_locales = [:en, :es]  # Aquí es "available_locales" en lugar de "avaible_locales"
+
+    # Idioma predeterminado
+    config.i18n.default_locale = :es  # Aquí es "default_locale" en lugar de "avaible_locale"
   end
 end

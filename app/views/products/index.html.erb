@@ -1,8 +1,9 @@
-<h1>Products:</h1>
+
+<h1><%= t('.title') %></h1>
+
 
 <%= 1 + 1 %>
 <%= Date.today %>
 <%= @products.count %>
 
 <%= render partial: 'product', collection: @products %>
-
